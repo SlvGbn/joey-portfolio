@@ -1,0 +1,122 @@
+@use "media";
+
+.Expertise {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    .ExpertiseHeading {
+        /* Heading/H2 */
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 120%; /* 57.6px */
+        letter-spacing: -0.48px;
+    }
+
+    .ExpertiseMain {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-right: 34px;
+        row-gap: 84px;
+        
+
+        
+        .ContentBlock {
+            display: flex;
+            flex-direction: column;
+            width: 454px;
+            // height: 206px;
+            flex-shrink: 0;
+            gap: 24px;
+
+            .ContetHeading {
+                /* Heading/H3 */
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 130%; /* 41.6px */
+                letter-spacing: -0.32px;
+            }
+
+            .ContentText {
+                /* Body/XL */
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 140%; /* 28px */
+                letter-spacing: -0.2px;
+                padding-left: 8px;
+            }
+        }
+    
+    }
+}
+
+
+
+@media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
+    .Expertise {
+        gap:  media.fv(14px, 40px, media.$sm, media.$md);
+    
+        .ExpertiseHeading {
+            font-size: media.fv(24px, 32px, media.$sm, media.$md);
+        }
+
+        .ExpertiseMain {
+            justify-content: center;
+            column-gap: 32px;
+            padding-right: 0;
+            row-gap:  media.fv(32px, 60px, media.$sm, media.$md);
+
+            .ContentBlock {
+                width:  media.fv(343px, 328px, media.$sm, media.$md);
+                gap: 16px;
+
+                .ContetHeading {
+                    font-size: media.fv(20px, 24px, media.$sm, media.$md);
+                }
+    
+                .ContentText {
+                    font-size:media.fv(14px, 16px, media.$sm, media.$md);
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+   
+}
+
+@media (min-width: media.$md) and (max-width: calc(media.$lg - 1px)) {
+
+    .Expertise {
+        gap:  media.fv(40px, 45px, media.$md, media.$lg);
+    
+        .ExpertiseHeading {
+            font-size: media.fv(32px, 48px, media.$md, media.$lg);
+        }
+
+        .ExpertiseMain {
+            padding-right: media.fv(0px, 34px, media.$md, media.$lg);
+            row-gap:  media.fv(60px, 83px, media.$md, media.$lg);
+
+            .ContentBlock {
+                width:  media.fv(328px, 442px, media.$md, media.$lg);
+                gap: media.fv(32px, 24px, media.$md, media.$lg);
+
+                .ContetHeading {
+                    font-size: media.fv(24px, 32px, media.$md, media.$lg);
+                }
+    
+                .ContentText {
+                    font-size: media.fv(16px, 20px, media.$md, media.$lg);
+                    padding-left: media.fv(0px, 8px, media.$md, media.$lg);
+                }
+            }
+        }
+    }
+}
+

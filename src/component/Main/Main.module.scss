@@ -1,0 +1,82 @@
+@use "media";
+
+.Main {
+    width: 1216px;
+    padding-bottom: 48px;
+
+    > :nth-child(1) {
+        margin-bottom: 144px;
+        // Hero-Projects
+    }
+
+    > :nth-child(2) {
+        margin-bottom: 155px;
+        // Projects-Expertise
+    }
+
+    > :nth-child(3) {
+        margin-bottom: 75px;
+        // Expertise-Design
+    }
+
+    > :nth-child(4) {
+        margin-bottom: 80px;
+        // Design-Testimonials
+    }
+   
+}
+
+@media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
+    .Main {
+        width: media.fv(343px, 688px,  media.$sm, media.$md);
+        padding-bottom: 35px;
+
+        > :nth-child(1) {
+            margin-bottom: 55px;
+            // Hero-Projects
+        }
+    
+        > :nth-child(2) {
+            margin-bottom: 61px;
+            // Projects-Expertise
+        }
+    
+        > :nth-child(3) {
+            margin-bottom: 48px;
+            // Expertise-Design
+        }
+    
+        > :nth-child(4) {
+            margin-bottom: 32px;
+            // Design-Testimonials
+        }
+    }
+}
+
+@media (min-width: media.$md) and (max-width: calc(media.$lg - 1px)) {
+    .Main {
+        width: media.fv(688px, 1216px,  media.$md, media.$lg);
+        padding-bottom: 48px;
+
+        > :nth-child(1) {
+            margin-bottom:  media.fv(93px, 144px,  media.$md, media.$lg);
+            // Hero-Projects
+        }
+    
+        > :nth-child(2) {
+            margin-bottom: media.fv(70px, 155px,  media.$md, media.$lg);
+            // Projects-Expertise
+        }
+    
+        > :nth-child(3) {
+            margin-bottom: media.fv(40px, 75px,  media.$md, media.$lg);
+            // Expertise-Design
+        }
+    
+        > :nth-child(4) {
+            margin-bottom: media.fv(60px, 80px,  media.$md, media.$lg);
+            // Design-Testimonials
+        }
+    }
+}
+

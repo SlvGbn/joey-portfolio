@@ -1,0 +1,124 @@
+@use "media";
+
+
+
+.Testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .TestimonialsHeading {
+        /* Heading/H1 */
+        font-size: 64px;
+        font-weight: 600;
+        line-height: 110%; /* 70.4px */
+        letter-spacing: -0.64px;
+    }
+
+    .TestimonialsMain {
+        display: inline-flex;
+        align-items: flex-end;
+        gap: 81px;
+
+        .TestimonialsMainText {
+            width: 954px;
+            /* Heading/H6 */
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 130%; /* 62.4px */
+            letter-spacing: -0.48px;
+        }
+
+        .TestimonialsSignature {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+
+            .SignatureName {
+                /* Heading/H5 */
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 140%; /* 28px */
+                letter-spacing: -0.2px;
+            }
+
+            .SignatureSource {
+                /* Body/XL */
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 140%; /* 28px */
+                letter-spacing: -0.2px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
+    .Main {
+        width: media.fv(343px, 688px,  media.$sm, media.$md);
+        padding-bottom: 48px;
+    }
+
+    .Testimonials {
+        gap: media.fv(32px, 40px,  media.$sm, media.$md);
+    
+        .TestimonialsHeading {
+            font-size: media.fv(24px, 48px,  media.$sm, media.$md);
+        }
+
+        .TestimonialsMain {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 13px;
+
+            .TestimonialsMainText {
+                width: 100%;
+                font-size: media.fv(14px, 20px,  media.$sm, media.$md);
+            }
+
+            .TestimonialsSignature {
+               
+                .SignatureName {
+                    font-size: media.fv(14px, 20px,  media.$sm, media.$md);
+                }
+    
+                .SignatureSource {
+                    font-size: media.fv(14px, 16px,  media.$sm, media.$md);
+                }
+            }
+        }
+    
+    }
+}
+
+@media (min-width: media.$md) and (max-width: calc(media.$lg - 1px)) {
+    .Testimonials {
+        gap: 40px;
+    
+        .TestimonialsHeading {
+            font-size: media.fv(48px, 64px,  media.$md, media.$lg);
+        }
+
+        .TestimonialsMain {
+            gap: media.fv(84px, 81px,  media.$md, media.$lg);
+
+            .TestimonialsMainText {
+                width: media.fv(459px, 954px,  media.$md, media.$lg);
+                font-size: media.fv(20px, 48px,  media.$md, media.$lg);
+            }
+
+            .TestimonialsSignature {
+               
+                .SignatureName {
+                    font-size: 20px;
+                }
+    
+                .SignatureSource {
+                    font-size: media.fv(16px, 20px,  media.$md, media.$lg);
+                }
+            }
+        }
+    }
+}

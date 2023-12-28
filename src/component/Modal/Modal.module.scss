@@ -1,0 +1,113 @@
+.Modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 1;
+   
+ 
+
+    .Form {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        z-index: 1;
+        gap: 40px;
+        padding: 48px;
+        border-radius: 16px;
+       
+
+        .Talk {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .Heading {
+                font-size: 32px;
+                font-weight: 600;
+                line-height: 130%; /* 41.6px */
+                letter-spacing: -0.32px;
+            }
+
+            .Exit {
+                background: none;
+                padding: 2px;
+          
+              
+                .ExitImg {
+                    height: 30px;
+                }
+            }
+        }
+      
+
+        .DataBlock {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 12px;
+
+          .Input {
+            display: flex;
+            width: 343px;
+            height: 56px;
+            padding: 8px 20px;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 48px;
+            background: var(--Grey-grey-50, #F9F9F9);
+            border: none;
+            // border: 1px solid;
+          }
+          
+        }
+
+        .AboutProject {
+            display: flex;
+            width: 600px;
+            height: 181px;
+            padding: 20px;
+            align-items: flex-start;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: var(--Grey-grey-50, #F9F9F9);
+            border: none;
+            max-height: 40vh;
+        }
+
+        .Submit {
+            display: flex;
+            width: 343px;
+            height: 52px;
+            padding: 19.724px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 9.862px;
+            flex-shrink: 0;
+
+            border-radius: 29.586px;
+            background: var(--Black-black-500, #000);
+            
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            color: var(--White-white-500, #FFF);
+
+        }
+    }
+
+    .Overlay {
+        z-index: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        // background: url("/Cover.png");
+        background: #000;
+        opacity: 0.7;
+    }
+}

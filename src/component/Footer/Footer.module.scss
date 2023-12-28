@@ -1,0 +1,179 @@
+@use "media";
+
+
+.Footer {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    width: 1216px;
+    // padding: 0 112px 48px 112px;
+    padding-bottom: 48px;
+
+
+    .Contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+
+        .Heading{
+            text-align: center;
+            /* Display/XL */
+            font-size: 140px;
+            font-weight: 600;
+            line-height: 110%; /* 154px */
+            letter-spacing: -2.8px;
+        }
+
+        .Link {
+            display: flex;
+            width: 262px;
+            padding: 32px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 144px;
+            background: var(--Black-black-500, #000);
+
+            .Mail {
+                color: var(--White-white-500, #FFF);
+                /* Heading/H5 */
+                font-size: 20px;
+                line-height: 140%; /* 28px */
+                letter-spacing: -0.2px;
+            }
+
+            .LinkImage {
+                width: 13px;
+                height: 15px;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .LightsAndNetwork {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .Lights {
+            /* Body/M */
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24px; /* 171.429% */
+            letter-spacing: -0.14px;
+        }
+
+        .SocialNetworks {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+
+            .SocialNetwork {
+                color: #000;
+                /* Body/M */
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px; /* 171.429% */
+                letter-spacing: -0.14px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
+    .Footer {
+        gap: 24px;
+        width: media.fv(343px, 688px,  media.$sm, media.$md);
+        padding-bottom: media.fv(34px, 41px,  media.$sm, media.$md);
+
+        .Contact {
+            gap: media.fv(48px, 27px,  media.$sm, media.$md);
+    
+            .Heading{
+                font-size: media.fv(48px, 79px,  media.$sm, media.$md);
+            }
+
+            .Link {
+                width: 262px;
+                padding: 24px;
+                gap: 7px;
+
+                .Mail {
+                    font-size: 20px;
+                }
+    
+                .LinkImage {
+                    width: 13px;
+                    height: 15px;
+                }
+            }
+        }
+
+        .LightsAndNetwork {
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+           
+            .SocialNetworks {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    
+    }
+    
+    
+}
+
+@media (min-width: media.$md) and (max-width: calc(media.$lg - 1px)) {
+    .Footer {
+        gap: media.fv(80px, 150px,  media.$md, media.$lg);
+        width: media.fv(688px, 1216px,  media.$md, media.$lg);
+        padding-bottom:  media.fv(41px, 48px,  media.$md, media.$lg);
+
+        .Contact {
+            gap: media.fv(27px, 48px,  media.$md, media.$lg);
+    
+            .Heading{
+                font-size: media.fv(79px, 140px,  media.$md, media.$lg);
+            }
+
+            .Link {
+                width: media.fv(148px, 262px,  media.$md, media.$lg);
+                padding: media.fv(18px, 32px,  media.$md, media.$lg);
+                gap: media.fv(4px, 7px,  media.$md, media.$lg);
+
+                .Mail {
+                    font-size: media.fv(11px, 20px,  media.$md, media.$lg);
+                }
+    
+                .LinkImage {
+                    width: media.fv(7px, 13px,  media.$md, media.$lg);
+                    height: media.fv(8px, 15px,  media.$md, media.$lg);
+                }
+            }
+        }
+
+        .LightsAndNetwork {
+    
+            .Lights {
+                font-size: media.fv(8px, 14px,  media.$md, media.$lg);
+            }
+    
+            .SocialNetworks {
+                gap:  media.fv(22px, 40px,  media.$md, media.$lg);
+    
+                .SocialNetwork {
+                    font-size: media.fv(8px, 14px,  media.$md, media.$lg);
+                }
+            }
+        }
+    }
+}
+

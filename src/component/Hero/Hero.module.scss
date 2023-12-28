@@ -1,0 +1,174 @@
+@use "media";
+
+
+.Hero {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+    position: relative;
+    padding-top: 206px;
+
+    .Heading {
+        /* Display/2XL */
+        font-size: 227px;
+        font-weight: 600;
+        line-height: 90%; /* 204.3px */
+        letter-spacing: -4.54px;
+    }
+
+    .ScrollDown {
+        position: absolute;
+        top: 489px;
+        right: 0;
+        display: inline-flex;
+        padding: 32px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        border-radius: 144px;
+        background: var(--Grey-grey-50, #F9F9F9);
+
+        .ScrollText {
+            color: black;
+            /* Heading/H5 */
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 140%; /* 28px */
+            letter-spacing: -0.2px;
+        }
+
+        .ScrollImg {
+            width: 13px;
+            height: 15px;
+        }
+    }
+
+    .HeroMain {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     
+
+        .Talk{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 9px;
+
+            .LetsTalk {
+                /* Heading/H4 */
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 130%; /* 31.2px */
+                letter-spacing: -0.24px;
+            }
+
+            .Mail {
+                /* Body/XL */
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 140%; /* 28px */
+                letter-spacing: -0.2px;
+            }
+
+        }
+
+        .Hello {
+            width: 471px;
+            /* Body/XL */
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 140%; /* 28px */
+            letter-spacing: -0.2px;
+        }
+    }
+}
+
+@media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
+    .Hero {
+        gap:  media.fv(76px, 32px, media.$sm, media.$md);
+        padding-top:  media.fv(92px, 110px, media.$sm, media.$md);
+        align-items: center;
+        
+    
+        .Heading {
+    
+            left:  media.fv(51px, 0px, media.$sm, media.$md);
+            font-size: media.fv(48px, 84px, media.$sm, media.$md);
+        }
+
+        .ScrollDown {
+            position: absolute;
+            top:  media.fv(200px, 185px, media.$sm, media.$md);
+            right: 0;
+            padding: media.fv(8px, 32px, media.$sm, media.$md);
+            gap: 7px;
+
+            .ScrollText {
+                font-size: media.fv(14px, 20px, media.$sm, media.$md);
+            }
+        }
+
+        .HeroMain {
+            width: 100%;
+
+            .Talk{
+    
+                .LetsTalk {
+                    font-size: 20px;
+                }
+    
+                .Mail {
+                    font-size: 14px;
+                }
+    
+            }
+    
+            .Hello {
+                width: media.fv(207px, 406px, media.$sm, media.$md);
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: media.$md) and (max-width: calc(media.$lg - 1px)) {
+    .Hero {
+        gap: media.fv(32px, 66px, media.$md, media.$lg);
+        padding-top: media.fv(220px, 206px, media.$md, media.$lg);
+    
+        .Heading {
+            font-size: media.fv(84px, 227px, media.$md, media.$lg);
+        }
+
+        .ScrollDown {
+            position: absolute;
+            top:  media.fv(300px, 489px, media.$md, media.$lg);
+            right: 0;
+        }
+
+
+        .HeroMain {
+ 
+            .Talk{
+    
+                .LetsTalk {
+                    font-size: media.fv(20px, 24px, media.$md, media.$lg);
+                }
+    
+                .Mail {
+                    font-size: media.fv(14px, 20px, media.$md, media.$lg);
+                }
+    
+            }
+    
+            .Hello {
+                width: media.fv(406px, 471px, media.$md, media.$lg);
+                font-size: media.fv(16px, 20px, media.$md, media.$lg);
+            }
+        }
+    }
+}
+
