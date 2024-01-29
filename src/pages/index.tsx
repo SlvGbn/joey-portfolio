@@ -1,5 +1,5 @@
 import {Hero} from "@src/component/Hero";
-import { Projects } from "@src/component/Projects/Projects";
+import { Projects } from "@src/component/Projects";
 import { Expertise } from "@src/component/Expertise/Expertise";
 import { Main } from "@src/component/Main";
 import { Header } from "@src/component/Header";

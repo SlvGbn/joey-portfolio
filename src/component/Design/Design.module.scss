@@ -12,6 +12,7 @@
         background: var(--Black-black-500, #000);
         position: absolute;
         left: 0;
+        overflow: hidden;
         
         .DesignText {
             display: flex;

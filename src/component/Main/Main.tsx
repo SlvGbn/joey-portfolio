@@ -7,7 +7,7 @@ type Props = {
 
 export function Main(props: Props) {
     return (
-        <main className={styles.Main}>
+        <main className={styles.Main} id="Main">
              {props.children}
         </main>
     )

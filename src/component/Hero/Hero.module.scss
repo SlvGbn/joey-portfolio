@@ -86,15 +86,23 @@
     }
 }
 
+@media (max-width: calc(media.$sm - 1px) ) {
+    .Hero {
+        gap:  media.rv(76px, media.$sm);
+        padding-top:  media.fv(92px, 110px, media.$sm, media.$md);
+        align-items: center;
+    }
+}
+
 @media (min-width: media.$sm) and (max-width: calc(media.$md - 1px)) {
     .Hero {
         gap:  media.fv(76px, 32px, media.$sm, media.$md);
         padding-top:  media.fv(92px, 110px, media.$sm, media.$md);
         align-items: center;
-        
-    
+
         .Heading {
-    
+            align-self: flex-start;
+            margin-left: media.fv(66px, 0px, media.$sm, media.$md);
             left:  media.fv(51px, 0px, media.$sm, media.$md);
             font-size: media.fv(48px, 84px, media.$sm, media.$md);
         }

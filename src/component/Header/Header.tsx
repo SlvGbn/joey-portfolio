@@ -27,12 +27,12 @@ export function Header() {
                 document.querySelector<HTMLDivElement>("#Projects"),
                 document.querySelector<HTMLDivElement>("#Expertise"), 
                 document.querySelector<HTMLDivElement>("#Down"), 
-                document.querySelector<HTMLDivElement>("#Feedback")
+                document.querySelector<HTMLDivElement>("#Feedback"),
             ];
 
             sec.forEach((section) => {
                 if (!section) return;
-                let top = window.scrollY + 0.5 * window.innerHeight;
+                let top = window.scrollY;
                 let offset = section.offsetTop;
                 let height = section.offsetHeight;
                 let id = section.getAttribute("id");
@@ -46,6 +46,7 @@ export function Header() {
                         if (href && href.includes(section.id)) link.classList.add(styles.Activ);
                     })
                 }
+
             })
         }
     },[]);
