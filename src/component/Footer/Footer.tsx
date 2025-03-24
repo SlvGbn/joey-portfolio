@@ -1,6 +1,6 @@
 import styles from "./Footer.module.scss";
 import modalStyles from "@src/component/Modal/Modal.module.scss"
-
+import Image from "next/image";
 
 
 
@@ -22,7 +22,7 @@ export function Footer() {
                 <h1 className={styles.Heading}>Let’s talk!</h1>
                 <a className={styles.Link} onClick={openModal}>
                     <p className={styles.Mail}>hello@joey.co</p>
-                    <img className={styles.LinkImage} src="FooterLinkImage.svg"/>
+                    <Image className={styles.LinkImage} src="FooterLinkImage.svg" alt=""/>
                 </a>
             </div>
             <div className={styles.LightsAndNetwork}>

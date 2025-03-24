@@ -1,5 +1,5 @@
 import styles from "./Hero.module.scss";
-
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -7,7 +7,7 @@ export function Hero() {
             <h1 className={styles.Heading}>Websites&<br/>Branding</h1>
             <a className={styles.ScrollDown} href="#Down">
                 <p className={styles.ScrollText}>SCROLL DOWN</p>
-                <img className={styles.ScrollImg} src="ScrollImg.svg"/>
+                <Image className={styles.ScrollImg} src="ScrollImg.svg" alt=""/>
             </a>
             <div className={styles.HeroMain}>
                 <div className={styles.Talk}>
@@ -19,7 +19,7 @@ export function Hero() {
                     </p>
                 </div>
                 <p className={styles.Hello}>
-                    Hello, I'm Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.
+                    Hello, I&apos;m Joey, an online product designer focusing on brand identity, advertising, and no-code instruments.
                 </p>
             </div>
         </section>

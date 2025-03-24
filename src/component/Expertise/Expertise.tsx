@@ -1,5 +1,5 @@
 import styles from "./Expertise.module.scss";
-
+import Image from "next/image";
 
 
 
@@ -25,7 +25,7 @@ export function Expertise() {
     ].map((elem, index) => (
         <div className={styles.ContentBlock} key={index}>
             <h2 className={styles.ContetHeading}>
-                <img src="Rectangle.svg"/>
+                <Image src="Rectangle.svg" alt=""/>
                 {elem.name}
             </h2>
             <p className={styles.ContentText}>{elem.text}</p>

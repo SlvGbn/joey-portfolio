@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Modal.module.scss";
 
 
@@ -16,7 +17,7 @@ export function Modal() {
                 <div className={styles.Talk}>
                 <h1 className={styles.Heading}>Let’s talk!</h1>
                 <button className={styles.Exit} onClick={hidden}>
-                    <img src="exit.png" className={styles.ExitImg}/>
+                    <Image src="exit.png" className={styles.ExitImg} alt=""/>
                 </button>
                 </div>
                 <div className={styles.DataBlock}>

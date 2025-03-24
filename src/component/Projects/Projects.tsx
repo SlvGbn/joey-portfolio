@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import styles from "./Projects.module.scss";
-
+import Image from "next/image";
 
 
 
@@ -32,7 +32,7 @@ export function Projects() {
         <div className={styles.ProjectsContentBlock} key={index}>
             <div className={classNames(styles.Background, {[styles.BackgroundCrtly]: elem.hasImage})}>
             {/* <div className={`${styles.Background} ${ elem.hasImage ? styles.BackgroundCrtly : ""}`}> */}
-                <img className={classNames(styles.Image, {[styles.ImageCrtly]: elem.hasImage})} src={elem.imageSrc}/>
+                <Image className={classNames(styles.Image, {[styles.ImageCrtly]: elem.hasImage})} src={elem.imageSrc} alt=""/>
             </div>
             <div className={styles.Signature}>
                 <h2 className={styles.SignatureHeading}>{elem.signatureHeading}</h2>
@@ -50,7 +50,7 @@ export function Projects() {
                 <p className={styles.Text}>As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.</p>
                 <a className={styles.More} href="more">
                     <p className={styles.MoreText}>More</p>
-                    <img className={styles.MoreImg} src="ProjectMore.svg"/>
+                    <Image className={styles.MoreImg} src="ProjectMore.svg" alt=""/>
                 </a>
             </div>
             <div className={styles.ProjectsMain}>

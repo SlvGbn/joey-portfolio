@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import styles from "./Header.module.scss";
 import { useEffect, useRef } from "react";
-
+import Image from "next/image";
 
 
 
@@ -78,7 +78,7 @@ export function Header() {
         <a className={classNames(styles.Link, {[styles.Activ]: !index})} href={elem.href} key={index} onClick={addClassActiv}>
             {
                 elem.imgSrc 
-                    ? <img className={styles.Number} src={elem.imgSrc}/> 
+                    ? <Image className={styles.Number} src={elem.imgSrc} alt=""/> 
                     : null
             }
             
@@ -89,12 +89,12 @@ export function Header() {
 
     return (
         <header className={styles.Header}>
-            <img className={styles.Heading} src="HeaderHeading.svg"/>
+            <Image className={styles.Heading} src="HeaderHeading.svg" alt=""/>
             <nav className={styles.NavigationPanel}>
                {NavigationPanelElement}
             </nav>
             <button className={styles.Popup}>
-                <img className={styles.PupupImg} src="menu.svg"/>
+                <Image className={styles.PupupImg} src="menu.svg" alt=""/>
             </button>
         </header>
     )
